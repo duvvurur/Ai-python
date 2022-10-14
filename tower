@@ -1,0 +1,9 @@
+def ToH(n, intial, inter, final):
+    if n==1:
+        print("Move Disk 1 from",intial,"to",final)
+        return
+    ToH(n-1,intial,final,inter)
+    print("Move Disk",n,"from",intial,"to",final)
+    ToH(n-1,inter,intial,final)
+n = int(input("Enter the Number of Disks..."))
+ToH(n, "A", "B", "C")
