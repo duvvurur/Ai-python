@@ -1,0 +1,10 @@
+import random
+def guess():
+    num=random.randint(1,10)
+    g=int(input())
+    if num==g:
+        print("You won")
+    elif num!=g:
+        print("You lost")
+    guess()
+guess()
